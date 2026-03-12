@@ -22,6 +22,6 @@ For analysis and triage, DebugView is designed around fast signal isolation: you
 
 Some capture modes require elevated privileges. In particular, capturing **kernel-mode debug output** may require permissions that allow the tool to load/enable the required driver components, and it’s common to run DebugView with administrative rights when doing driver-level diagnostics.
 
-When diagnosing early-boot drivers or intermittent problems that appear before manual monitoring can begin, DebugView offers a **boot logging** feature. This allows you to capture debug output during system startup and review it after the system reboots.
+For troubleshooting early-boot drivers or issues that occur before monitoring tools can be started, DebugView provides a **boot logging** capability. It records debug output during system startup and makes it available after the machine restarts.
 
-Debug messages may include sensitive information such as file paths, identifiers, or internal state details. If you enable **remote capture over TCP/IP**, treat the output as diagnostic telemetry. Limit access to trusted systems and avoid collecting logs in environments where the information could expose confidential data.
+Because debug output can contain sensitive details—such as system paths, identifiers, or internal state—use caution when enabling **remote capture via TCP/IP**. Ensure that only trusted hosts can access the stream and avoid capturing logs in environments where sensitive information could be exposed.
